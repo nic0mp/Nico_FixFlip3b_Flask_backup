@@ -25,7 +25,7 @@ class Users(db.Model):
     # Create a string
     def __repr__(self):
         return '<Name %r>' % self.name
-
+# Delete user
 @app.route('/update/<int:id>')
 def delete(id):
     user_to_delete = Users.query.get_or_404(id) 
@@ -60,19 +60,15 @@ def update(id):
         try:
             db.session.commit()
             flash('User has been Updated')
-            return render_template('update.html',
-                    form=form,
-                    name_to_update=name_to_update)
-                    
+            return render_template('update.html', form=form, name_to_update=name_to_update)
+
         except:
             flash('Error, you messed up')
-            return render_template('update.html',
-                    form=form,name_to_update=name_to_update) 
+            return render_template('update.html', form=form,name_to_update=name_to_update) 
        
     else:
-        return render_template('update.html',
-                    form=form,name_to_update=name_to_update,id=id) 
-                    
+        return render_template('update.html',form=form,name_to_update=name_to_update,id=id)
+                  
 # Create form class
 class NamerForm(FlaskForm):
     name = StringField("What's your name?", validators=[DataRequired()])

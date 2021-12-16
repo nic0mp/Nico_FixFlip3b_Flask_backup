@@ -3,6 +3,7 @@ body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 45s ease infinite;
+    color:  #535050;
 }
 
 table{
@@ -16,13 +17,19 @@ table{
 
  h1{
      text-align: center;
-     color: #1E1E1E;
+     color: #535050;
  }
   
 .ffheader{
     margin: auto;
-    margin-bottom: 5%;
     width: 75%;
+}
+
+.logo{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto 
 }
   
 .calc-box{
