@@ -1,0 +1,119 @@
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 45s ease infinite;
+}
+
+table{
+    background-color: white;
+    
+}
+
+.nav-link{
+    color: white;
+}
+
+ h1{
+     text-align: center;
+     color: #1E1E1E;
+ }
+  
+.ffheader{
+    margin: auto;
+    margin-bottom: 5%;
+    width: 75%;
+}
+  
+.calc-box{
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 2%;
+    width: 80%;
+    /* height: 500px; */
+}
+
+.btn{
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border:none;
+    position:relative;
+    width: 100%;
+    font-size:1em;
+    padding:1 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+}
+
+.btn:hover{
+    background:#fff;
+    color:#9c88ff;
+  }
+
+.btn:before,.btn:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+.btn:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+.btn:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+.fade-in-image {
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    }
