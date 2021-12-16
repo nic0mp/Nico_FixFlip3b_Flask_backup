@@ -15,7 +15,7 @@ app.config['SECRET_KEY'] = 'my secret key nobody needs to know'
 # initialize the db
 db = SQLAlchemy(app)
 
-# Create Model
+
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
@@ -75,7 +75,7 @@ def update(id):
                     
 # Create form class
 class NamerForm(FlaskForm):
-    name = StringField('Whats your name', validators=[DataRequired()])
+    name = StringField("What's your name?", validators=[DataRequired()])
     submit =  SubmitField('Submit')
 
 
@@ -163,4 +163,3 @@ def calculateCost():
                 AnnualInc=AnnualInc,
                 cROI=cROI
                 )
-    
