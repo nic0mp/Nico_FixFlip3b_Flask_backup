@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row calc-box shadow p-3 mb-5 bg-body ">
+
+        <div class="ffheader">
+            <h1>Fix and Flip Calculator</h1>
+        </div>
+       
+            <div class="col-md-6" >
+                <form action='/' method='POST'>
+                    <div class="inp-box">
+                       <h6>House Price</h6> 
+                        <input class="form-control form-control-sm" type='text' name='hprice'><br>
+                    </div>
+                    <div class="inp-box">
+                        <h6>Repair Budget</h6>
+                        <input class="form-control form-control-sm" type='text' name='rbudget'><br/>
+                    </div>
+                    <div class="inp-box">
+                        <h6>After Repair Value</h6>
+                        <input class="form-control form-control-sm" type='text' name='arv'><br>
+                    </div>
+                    <div class="inp-box">
+                        <h6>Rental Income</h6>
+                        <input class="form-control form-control-sm" type='text' name='totalRentInc'><br>
+                    </div>
+                    <div class="inp-box">
+                        <h6>Total Expenses</h6>
+                        <input class="form-control form-control-sm" type='text' name='totalExpenses'><br/>
+                    </div>
+                    <div >
+                        <button class="btn calcbtn mb-2" type='submit button' value='submit' >CALCULATE
+                        </button>
+                       
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-md-6 ">
+                <table class="table table-hover table-bordered table-striped ">
+                    <div class="fade-in-image">
+                        {% if totalCost %}
+                        <p>Total cost of project: ${{totalCost}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="fade-in-image">
+                        {% if ltcAmount %}
+                        <p> Funding Amount at 70%: ${{ltcAmount}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="fade-in-image">
+                        {% if loanDownPayment %}
+                        <p> Down Payment at 30%: ${{loanDownPayment}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="fade-in-image">
+                        {% if gProfit %}
+                        <p>Gross Profit from ${{AfterRepairVal}} sale : ${{ gProfit }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="fade-in-image">
+                        {% if roi %}
+                        <p>Potential Gross ROI {{ roi }}%</p>
+                        {% endif %}
+                    </div>
+                    <div class="fade-in-image">
+                        {% if RefiAmt %}
+                        <p>Potential Cash-out Refinance amount of ${{ RefiAmt }}</p>
+                        {% endif %}
+                    </div>
+                        <!-- RENTAL SECTION -->
+                    <div class="fade-in-image">
+                        {% if CashFlow %}
+                        <p>Potential Cash Flow ${{ CashFlow }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="fade-in-image">
+                        {% if AnnualInc %}
+                        <p>Annual Income ${{ AnnualInc }}</p>
+                        {% endif %}
+                    </div>
+                    <div class="fade-in-image">
+                        {% if cROI %}
+                        <p>Cash on Cash ROI {{ cROI }}%</p>
+                        {% endif %}
+                    </div>
+            
+                </talbe>
+            </div>
+</div>
+
+
+
+
+  
+
+
+{% endblock %}
+
